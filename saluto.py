@@ -1,2 +1,3 @@
-nome = "Alex Brasovianu"
-print("Mi chiamo", nome)
+# nome = "Alex Brasovianu"
+# print("Mi chiamo", nome)
+
