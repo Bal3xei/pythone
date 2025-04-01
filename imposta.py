@@ -6,7 +6,6 @@ scaglione2= 50000
 
 while True:
     reddito = float(input("Insersici il reddito"))
-
     if reddito<=scaglione1:
         tassazione=reddito*aliquotaA
     else:    
