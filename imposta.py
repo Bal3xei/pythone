@@ -15,5 +15,5 @@ while True:
         else: 
             tassazione=(scaglione1*aliquotaA)+((scaglione2-scaglione1)*aliquotaB)+((reddito-scaglione2)*aliquotaC)
     
-    print(tassazione)
+    print(f"La tassazione da pagare per un reddito di {reddito} è di {tassazione}, percependo un netto annuo di {reddito-tassazione}")
             
