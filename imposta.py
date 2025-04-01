@@ -5,7 +5,7 @@ scaglione1= 28000
 scaglione2= 50000
 
 while True:
-    reddito =int(input("Insersici il reddito"))
+    reddito = float(input("Insersici il reddito"))
 
     if reddito<=scaglione1:
         tassazione=reddito*aliquotaA
@@ -13,7 +13,7 @@ while True:
         if reddito > scaglione1 and reddito <= scaglione2:
             tassazione=(scaglione1*aliquotaA)+((reddito-scaglione1)*aliquotaB)
         else: 
-            tassazione=(scaglione1*aliquotaA)+((reddito-scaglione1)*aliquotaB)+((reddito-scaglione2)*aliquotaC)
+            tassazione=(scaglione1*aliquotaA)+((scaglione2-scaglione1)*aliquotaB)+((reddito-scaglione2)*aliquotaC)
     
     print(tassazione)
             
