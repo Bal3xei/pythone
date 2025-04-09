@@ -1,6 +1,7 @@
 prices=[]
 isPet=[]
 counter=0
+SCONTO_VARIABILE= 0.2
 
 
 def discount(prices, isPet, nItems):
@@ -12,7 +13,7 @@ def discount(prices, isPet, nItems):
             if isPet[x]==True:
                 stringa+=(f"{prices[x]} Y\n")
             else:
-                stringa+=(f"{prices[x]-(prices[x]*0.2)} N\n")
+                stringa+=(f"{prices[x]-(prices[x]*SCONTO_VARIABILE)} N\n")
                 somma += prices[x]
             x+=1
             
@@ -24,7 +25,7 @@ def discount(prices, isPet, nItems):
             else:
                 stringa+=(f"{prices[x]} N\n")
             x+=1
-    stringa += f"Lo sconto è di  {somma*0.20}"
+    stringa += f"Lo sconto è di  {somma*SCONTO_VARIABILE}"
     return stringa
     
 
