@@ -15,6 +15,14 @@ def naviga2(tag, indent) :
             naviga2(stag, indent + " ")
 
 
+def naviga3(tag) :
+    if tag.name == "a":
+        print(tag["href"])
+    for stag in tag.contents:
+        if type(stag) == bs4.element.Tag :
+            naviga3(stag)
+
+
 url = "https://www.itsturismomarche.it/"
 risultato = urllib3.request("GET", url)
 print(type(url))
@@ -25,4 +33,4 @@ doc = bs4.BeautifulSoup(text)
 
 # naviga(doc)
 
-naviga2(doc,"")
+naviga3(doc)
