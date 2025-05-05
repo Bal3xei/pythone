@@ -1,4 +1,5 @@
 import urllib.request
+outfile = open("")
 url = "https://www.comuni-italiani.it/province.html"
 response = urllib.request.urlopen(url)
 theBytes = response.read()
