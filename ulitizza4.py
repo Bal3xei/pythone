@@ -17,9 +17,12 @@ def esegui_query(idx):
         case "INSERT":
             cur.execute(f"INSERT INTO regioni (nome) VALUES ('{input('Inserisci il nome della regione: ')}')")
             print(f"Query eseguita!")
+
+        case "SELECT":
+            cur.execute("SELECT * From regioni")
+            print(f"Query eseguita!")
         case _:
             print("Indice non valido")
-
 
 
 cur = conn.cursor()
